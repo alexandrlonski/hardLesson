@@ -1,18 +1,47 @@
-let num = 266219,
-  i;
-num = num.toString().split('');
+// Пункт№1
 
+let lang;
+langRu = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
+langEn = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-num = num.reduce((accumulator, currentValue, currentIndex, array) => {
-  return accumulator * currentValue
-}, 1)
-console.log(num);
+lang = prompt('Выберите язык', 'ru/en');
 
-function pow(a, n) {
-  return a ** n;
+// Через if
+if (lang === 'ru') {
+  console.log(langRu);
+} else if (lang === 'en') {
+  console.log(langEn);
 }
 
-num = pow(num, 3)
-console.log(num);
+// Через Switch
 
-console.log(num.toString().substr(0, 2));
+switch (lang) {
+  case 'ru':
+    console.log(langRu);
+    break
+  case 'en':
+    console.log(langEn);
+    break
+  default:
+    alert( "Повторите попытку" );  
+}
+
+
+let langDay = [];
+langDay['ru'] = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
+langDay['en'] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+console.log(langDay[lang]);
+
+
+// Пункт№2
+
+let namePerson;
+
+namePerson = prompt('Введите своё имя', '');
+
+let message = (namePerson.toLowerCase() === 'максим') ? 'преподаватель' :
+  (namePerson.toLowerCase() === 'артём') ? 'директор' :
+  'студент';
+
+alert( message );

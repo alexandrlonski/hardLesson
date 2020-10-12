@@ -7,6 +7,7 @@ langEn = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 lang = prompt('Выберите язык', 'ru/en');
 
 // Через if
+
 if (lang === 'ru') {
   console.log(langRu);
 } else if (lang === 'en') {
@@ -26,6 +27,7 @@ switch (lang) {
     alert( "Повторите попытку" );  
 }
 
+// Через многомерный массив
 
 let langDay = [];
 langDay['ru'] = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];

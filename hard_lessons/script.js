@@ -42,8 +42,9 @@ let namePerson;
 
 namePerson = prompt('Введите своё имя', '');
 
-let message = (namePerson.toLowerCase() === 'максим') ? 'преподаватель' :
+let whoAreYou = (namePerson.toLowerCase() === 'максим') ? 'преподаватель' :
   (namePerson.toLowerCase() === 'артём') ? 'директор' :
   'студент';
 
-alert( message );
+alert(whoAreYou);
+console.log(whoAreYou);

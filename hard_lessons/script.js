@@ -1,5 +1,5 @@
 
-function test(str) {
+function checkString(str) {
   if (typeof str !== 'string') {
     alert('аргумент не строка');
     return;
@@ -9,7 +9,7 @@ function test(str) {
   return str.length > 30 ? str.slice(0, 30) + '...' : str;
 };
 
-alert(test(prompt('Напишите предложение', '')));
+alert(checkString(prompt('Напишите предложение', '')));
 // alert(test(+prompt('Напишите предложение', '')));
 
 

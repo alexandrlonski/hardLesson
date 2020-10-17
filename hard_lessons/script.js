@@ -24,12 +24,12 @@ let arr = [
 let n = 100;
 
 firstFor:
-for ( let i = 2; i <= n; i++) { // Для всех i...
+for ( let i = 2; i <= n; i++) { 
 
-  for (let j = 2; j < i; j++) { // проверить, делится ли число..
-    if (i % j == 0) continue firstFor; // не подходит, берём следующее
+  for (let j = 2; j < i; j++) { 
+    if (i % j == 0) continue firstFor; 
   }
   
   let arr = [1, i];
-  console.log(`${i} Делитель этого числа: ${arr}`);// простое число
+  console.log(`${i} Делитель этого числа: ${arr[0]} и ${arr[1]}`);
 }

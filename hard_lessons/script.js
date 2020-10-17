@@ -21,7 +21,15 @@ let arr = [
    }
  }
 
-for (let i = 1; i <= 100; ++i) {
-  let arr = [1, i]
-  console.log(`${i} Делители этого числа: ${arr[0]} и ${arr[1]}`);
+let n = 100;
+
+firstFor:
+for ( let i = 2; i <= n; i++) { // Для всех i...
+
+  for (let j = 2; j < i; j++) { // проверить, делится ли число..
+    if (i % j == 0) continue firstFor; // не подходит, берём следующее
+  }
+  
+  let arr = [1, i];
+  console.log(`${i} Делитель этого числа: ${arr}`);// простое число
 }

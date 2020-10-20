@@ -12,7 +12,7 @@ Year = Data.getFullYear(),
 NumDay = Data.getDate(),
 Hour = Data.getHours(),
 Minutes = Data.getMinutes(),
-Seconds = setInterval(Data.getSeconds()),
+Seconds = Data.getSeconds(),
 week = [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "<i>Суббота</i>", "<i>Воскресенье</i>" ],
 today = (6 + new Date().getDay()) % 7,
 Day = week[today];
@@ -32,11 +32,5 @@ textHour = function() {
 document.getElementById('dateOne').innerHTML = (`Cегодня ${Day}, ${NumDay} ${Month} ${Year} года, ${Hour} ${textHour()} ${Minutes} минуты ${Seconds} секунды` );
 document.getElementById('dateTwo').innerHTML =  (`${add(NumDay)}.${add(Data.getMonth())}.${Year} - ${add(Hour)}.${add(Minutes)}.${add(Seconds)}`);
 }, 1000);
-
-
-
-// document.write(`Cегодня ${Day}, ${NumDay} ${Month} ${Year} года, ${Hour} ${textHour()} ${Minutes} минуты ${Seconds} секунды` );
-// document.write(`${add(NumDay)}.${add(Data.getMonth())}.${Year} - ${add(Hour)}.${add(Minutes)}.${add(Seconds)}`);
-
 
 
